@@ -8,7 +8,9 @@ WORKDIR /src/backend
 
 # Copy the go.mod and go.sum, download the dependencies
 COPY go.mod go.sum ./
-RUN go mod download
+COPY zscaler.crt /usr/local/share/ca-certificates/.
+RUN update-ca-certificates
+RUN go mod  download
 
 # Copy rest of the application source code
 COPY . ./

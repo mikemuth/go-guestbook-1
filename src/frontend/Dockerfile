@@ -8,6 +8,8 @@ WORKDIR /src/frontend
 
 # Copy the go.mod and go.sum, download the dependencies
 COPY go.mod go.sum ./
+COPY zscaler.crt /usr/local/share/ca-certificates/.
+RUN update-ca-certificates
 RUN go mod download
 
 # Copy rest of the application source code
