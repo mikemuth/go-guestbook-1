@@ -16,7 +16,7 @@
         <div class="container">
             <h1>
                 <a href="/">
-                    My Guestbook
+                    Mike's Guestbook
                 </a>
             </h1>
             <a href="#" class="text-muted">View on GitHub</a>
